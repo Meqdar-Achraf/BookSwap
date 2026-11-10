@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BookSwap</title>
+  <script src="apps.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+    integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+  <nav id="nvigationbarre" class="flex  pb-2.5 pt-1 justify-evenly items-center bg-slate-700">
+    <a href="index.html" class=" text-3xl flex items-center font-bold"><i class="fa-brands fa-leanpub text-indigo-700"></i><p class="text-indigo-300">Book<span class="text-indigo-700">Swap</span></p></a>
+    <ul class="flex justify-between w-[40vw] text-lg text-white font-semibold">
+      <li ><a href="index.html">Demande d'échange</a></li>
+      <li ><a href="books.html">Livres</a></li>
+      <li><a href="#">A propos</a></li>
+    </ul>
+  </nav>
+  <main class="mt-20 mx-7 flex gap-10 bg-lime-700">
+    <section class="flex flex-col ml-5">
+      <form action="" class="my-5">
+        <label for="search">Rechrcher</label><br />
+        <input type="search" name="search" placeholder="Titre de livre" />
+        <br />
+
+        <label for="" class="">Type d'échange</label><br />
+        <span><input type="radio" /> Tous</span>
+        <span><input type="radio" /> définitif</span>
+        <span><input type="radio" /> Temporaire</span>
+      </form>
+      <h2>categorie</h2>
+      <select name="category" id="livre-categorie">
+        Categorie
+        <option value="developpement">Tous les Categorie</option>
+        <option value="developpement">Dévelloppement</option>
+        <option value="architecture">Architecture</option>
+        <option value="algorithmique">Algorithmique</option>
+      </select>
+    </section>
+    <!-- <section class="books_cards"></section> -->
+
+    <section id="demmandesechange" class="demmandes-container w-full px-10">
+      <div>
+        <h1>Demande d'échange des livres</h1>
+        <p>Consultez les proposition d'échange entre les apprenants</p>
+      </div>
+      <div id="" class="">
+        <p>10 Total demandes</p>
+        <div id="tri">
+          <span>Triez par:</span>
+          <select name="tri" id="demmandes-trie_options">
+            <option value="plus_recents">Plus récents</option>
+            <option value="plus_ancients">Plus ancients</option>
+          </select>
+        </div>
+
+        <div id="demmandes-container-cards" class="grid grid-cols-2 w-full gap-10">
+          <article class="border-1 border-slate-200 rounded-lg p-3.5 ">
+            <div class="flex justify-between">
+              <p class="font-bold text-md text-green-500 p-1 px-2 bg-green-200 rounded-xl mb-4">échange définitif</p>
+              <span class="font-normal text-md text-slate-400">Il y a 2h</span>
+            </div>
+            <div class="flex gap-5">
+              <div class="flex gap-2.5">
+                <img src="images.png" width="100px" height="200px" alt="" class="rounded-lg"/>
+                <div>
+                  <h3>code clean</h3>
+                  <address>Rober.D Martin</address>
+                  <p>developpement</p>
+                  <h5><span>#Code</span><span>#Qualié</span></h5>
+                </div>
+              </div>
+              <div class="self-center text-slate-700 text-2xl">
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+              </div>
+              
+                <div class="flex gap-2.5">
+                  <img src="images.png" width="100px" height="200px" alt="" class="rounded-lg" />
+                  <div>
+                    <h3>code clean</h3>
+                    <address>Rober.D Martin</address>
+                    <p>developpement</p>
+                    <h5><span>#Code</span><span>#Qualié</span></h5>
+                  </div>
+                </div>
+              
+            </div>
+          </article>
+        </div>
+    </section>
+  </main>
+</body>
+
+</html>
