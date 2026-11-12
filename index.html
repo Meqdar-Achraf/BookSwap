@@ -37,7 +37,7 @@
 
     <main class="mt-10 mx-15">
       <section
-        class="hero bg-slate-700 rounded-xl pt-5 pl-15 bg-[url(herosection.png)] bg-cover bg-no-repeat"
+        class="hero bg-slate-700 rounded-xl pt-5 pl-15 bg-[url(assets/images/herosection.png)] bg-cover bg-no-repeat"
       >
         <h1 class="w-150 text-3xl font-bold text-white">
           échange des livres techniques entre les
@@ -145,68 +145,67 @@
 
       <div
         id="demmandes_info-maodal"
-        class="p-5 border-2 border-slate-200 bg-sky-100 rounded-xl w-[50vw]"
+        class="p-5 border-2 border-slate-200 bg-sky-100 rounded-xl w-[50vw] hidden absolute top-10 left-90"
       >
-        <i
+        <button id="close_modale" type="button" class="relative left-[95%] hover:cursor-pointer"><i 
           class="fa-solid fa-right-from-bracket text-xl text-sky-500 font-bold relative left-[95%]"
-        ></i>
+        ></i></button>
         <h2 class="text-3xl text-sky-900 font-bold my-10 -mt-5">
           Details de demmande d'échange:
         </h2>
                   <div class="border-2 border-slate-300 rounded-xl p-3 my-2">
             <div class="flex justify-between">
-              <div class="flex gap-2.5 border-be-2 border-slate-300 pb-3 mb-5">
+              <div class="flex gap-2.5 border-be-2 border-slate-300 pb-3 mb-5 max-w-[60%]">
                 <img
-                  src="images.png"
+                id="book_image"
+                  
                   width="100px"
                   height="200px"
                   alt=""
                   class="rounded-lg"
                 />
                 <div class="pl-5">
-                  <h3 class="font-bold text-lg text-[#131c4c]">code clean</h3>
-                  <address class="font-normal text-md text-slate-600">
-                    Rober.D Martin
+                  <h3 id="book_name" class="font-bold text-lg text-[#131c4c]"></h3>
+                  <address id="book_author" class="font-normal text-md text-slate-600">
+                    
                   </address>
                   <p
-                    class="font-small text-md text-slate-700 px-5 py-1 mt-2 rounded-full bg-slate-300 max-w-40"
+                    id="book_category" class="font-small text-md text-slate-700 px-5 py-1 mt-2 rounded-full bg-slate-300 max-w-40"
                   >
-                    developpement
+                   
                   </p>
                   <p
-                    class="text-sm font-normal text-gray-600 flex justify-evenly mt-3 -ml-2 max-w-[100%]"
+                    id="book_description" class="text-sm font-normal text-gray-600 flex justify-evenly mt-3 -ml-2 max-w-[100%]"
                   >
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Nulla
+                   
                   </p>
                 </div>
               </div>
-              <div class="bg-sky-200 rounded-xl p-2.5 w-60 h-40 ">
-                <h2 class="flex items-center font-bold text-lg text-[#131c4c] mb-2"
-                  ><i class="fa-solid fa-calendar-days "></i>échange
-                  Temporaire</h2
+              <div class="bg-sky-200 rounded-xl p-2.5 w-60 h-40">
+                <h2 id="demmande_type" class="flex items-center font-bold text-lg text-[#131c4c] mb-2"
+                  ><i class="fa-solid fa-calendar-days "></i></h2
                 >
                 <p class="font-semibold text-slate-600 text-md">Date de debut:</p>
-                <h4 class="font-normal text-sm text-slate-600 pb-.5 px-2">18-12-2025</h4>
+                <h4 id="start_date" class="font-normal text-sm text-slate-600 pb-.5 px-2"></h4>
                 
-                <p class="font-semibold text-slate-600 text-md">Status: <span class="font-semibold text-slate-800 text-md" >pending</span></p>
+                <p class="font-semibold text-slate-600 text-md">Status: <span id="Demande_status" class="font-semibold text-slate-800 text-md" ></span></p>
 
               </div>
             </div>
             <div id="demande_offre-author" class="flex items-center gap-2">
               <div>
-                <img src="images.png" class="h-10 w-10 rounded-full" alt="" />
+                <img id="owner_profile" class="h-10 w-10 rounded-full" alt="" />
               </div>
               <div>
-                <h4 class="text-lg text-slate-700 font-semibold">
-                  Sara Chraibi
+                <h4 id="owner_name" class="text-lg text-slate-700 font-semibold">
+                 
                 </h4>
               </div>
             </div>
           </div>
 
         <div id="offres">
-          <h3 class="text-3xl text-sky-900 font-bold my-10">Offres: {2}</h3>
+          <h3 id="offres_count" class="text-3xl text-sky-900 font-bold my-10">Offres: </h3>
 
           <article class="border-2 border-slate-300 rounded-xl p-3 my-2">
             <div class="flex justify-between">
@@ -236,7 +235,7 @@
                   </p>
                 </div>
               </div>
-              <div class="bg-sky-200 rounded-xl p-2.5 w-60 h-40 ">
+              <div class="bg-sky-200 rounded-xl p-2.5 w-60 h-40">
                 <h2 class="flex items-center font-bold text-lg text-[#131c4c] mb-2"
                   ><i class="fa-solid fa-calendar-days "></i>échange
                   Temporaire</h2
