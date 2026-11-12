@@ -1,27 +1,21 @@
 let demandesList
 let books
 let details_buttons
+
+chargerDemandes()
+
 function chargerDemandes() {
     fetch('http://127.0.0.1:8000/api/v1/exchange-requests?status=open').then (reponse =>{
       if(!reponse.ok) reject(new Error(`Erreur HTTP ${reponse.status}`))
       return reponse.json()})
     .then (data => {return demandesList = [...data.data]})
     .then(array => {
-      
       afficherdemmandes(array)
       details_buttons = document.querySelectorAll(".detail_button")
       afficherdemmandesdettails(details_buttons)
-
     })
 }
 
-// function charger() {
-//     fetch('http://127.0.0.1:8000/api/v1/exchange-requests?status=open').then (reponse =>{
-//       if(!reponse.ok) reject(new Error(`Erreur HTTP ${reponse.status}`))
-//       console.log(reponse)})
-// }
-
-// charger()
 // affichage des demmandes 
 
 const container = document.getElementById("demmandesechange")
@@ -31,7 +25,6 @@ function afficherdemmandes(demmandes){
     demmandesCard(demmande)
   });
 }
-
 
 function demmandesCard(demmande){
   const card = `<article class="border-1 border-slate-200 rounded-lg p-3.5 bg-sky-50" data-livre="${demmande.id}">
@@ -87,27 +80,23 @@ function demmandesCardBottom(type, startdate, enddate,ID){
             return bottom
 }
 
-// const details_buttons = document.getElementsByClassName("detail_button")
+// affichage des details de demmandes
 
+function openModal(buttonID){
+  document.getElementById(buttonID).classList.remove('hidden')
+}
+function closeModal(buttonID){
+  document.getElementById(buttonID).classList.add('hidden')
+}
+ 
 function afficherdemmandesdettails(buttons){
   buttons.forEach(button => {
     button.addEventListener('click', ()=>{
+      
     })
   })
 }
-// afficherdemmandesdettails(details_buttons)
-// const chargerDemandes = new Promise
 
-// async function getbooks() {
-//     const livres = await fetch('http://127.0.0.1:8000/api/v1/books');
-//     if (!livres.ok) throw new Error(`Erreur HTTP ${reponse.status}`);
-//   const resultat = await livres.json()
-//   books = [...resultat.data]
-//   console.log(books);
-//   // afficherlivres(books)
-// }
-
-chargerDemandes()
 // getbooks()
 
 
